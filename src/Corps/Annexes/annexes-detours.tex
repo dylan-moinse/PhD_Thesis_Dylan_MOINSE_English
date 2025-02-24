@@ -1,0 +1,109 @@
+% ___________________________________________
+    % Detour angles
+    %\newpage
+    \setcounter{section}{0}
+\chapterheader{Supplementary Notes on Angle Measurement}
+\chapter{Appendices on the Determination of Angles in Detour Geometry}
+    \label{annexes:calcul-detours}
+
+    % Reference
+\hyperref[annexes:calcul-detours]{Appendix~\ref{annexes:calcul-detours}} refers to the \hyperref[chap5:detours-pauses-optimisation]{section dedicated to detours and pauses} (page \pageref{chap5:detours-pauses-optimisation}), within \hyperref[chap5:titre]{Chapter~5} (page \pageref{chap5:titre}), and provides detailed calculations to determine the angles of intermodal movements involving geometric detours.%%Translated%%
+
+    % ___________________________________________
+    % Mini-table of contents
+    \setcounter{tocdepth}{2}
+    % Redefine the title of the local table of contents
+    \renewcommand{\localcontentsname}{Structure of Appendix~\ref{annexes:calcul-detours}}
+\localtableofcontents
+
+    \newpage
+    % Questionnaire structure
+    \newpage
+    \needspace{1\baselineskip} % Reserve space
+    \sectionheader{Angle Calculation}
+\section{Angle Calculation}
+    \label{annexes:calcul-detours-angles}
+
+    % Cartesian coordinates
+\subsection{Cartesian Coordinates}
+    \label{annexes:calcul-detours-angles-cartesien}
+
+    % Cartesian coordinates
+Using the geographical coordinates of each point \(A\), \(B\), and \(C\), expressed in latitude and longitude using the \acrshort{WGS84} reference system, we converted them into Cartesian coordinates (\(x\), \(y\), \(z\)) using the conversion formulas for a sphere.%%Translated%%
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle x_{(A, B, C)} &=& R* cos(latitude) * cos(longitude)\\\\
+    \displaystyle y_{(A, B, C)} &=& R* cos(latitude) * sin(longitude)\\\\
+    \displaystyle z_{(A, B, C)} &=& R* sin(latitude)\\\\
+    \end{array}
+    \end{equation*}
+
+    \begin{align*}
+    &\text{where:} \\
+    &R \text{ represents the Earth's radius.}
+    \end{align*}
+
+    % Vectors AB and BC
+\subsection{Vectors}
+    \label{annexes:calcul-detours-angles-vecteurs}
+
+    % Vectors AB and BC
+Using the determined Cartesian coordinates \(x_{(A, B, C)}\), \(y_{(A, B, C)}\), and \(z_{(A, B, C)}\), we then calculated the vectors \(AB\) and \(BC\) by subtracting the Cartesian coordinates of points \(A\) and \(B\), and then \(B\) and \(C\).%%Translated%%
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle AB &=& (x_B - x_A, y_B - y_A, z_B - z_A)\\\\
+    \displaystyle BC &=& (x_C - x_B, y_C - y_B, z_C - z_B)\\\\
+    \end{array}
+    \end{equation*}
+
+    % Dot product and norm of vectors
+\subsection{Dot Product and Norm of Vectors}
+    \label{annexes:calcul-detours-angles-produit-scalaire}
+
+    % Dot product and norm of vectors
+From the obtained vectors \(AB\) and \(BC\), we calculated their dot product (\(AB \cdot BC\)) and their norms (\(||{AB}||\)) and (\(||{BC}||\)).%%Translated%%
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle AB \cdot BC &=& (x_{AB} * x_{BC}) + (y_{AB} * y_{BC}) + (z_{AB} * z_{BC})\\
+    \end{array}
+    \end{equation*}
+
+    \begin{align*}
+    &\text{where:} \\
+    &x/y/z_{AB} \text{ represent the components of the vector AB;}\\
+    &x/y/z_{BC} \text{ represent the components of the vector BC.}
+    \end{align*}
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle ||AB|| &=& \sqrt{(x_{AB}^2 + y_{AB}^2 + z_{AB}^2)}\\
+    \displaystyle ||BC|| &=& \sqrt{(x_{BC}^2 + y_{BC}^2 + z_{BC}^2)}\\
+    \end{array}
+    \end{equation*}
+
+    % Angle
+\subsection{Determination of Angles in Radians and Degrees}
+    \label{annexes:calcul-detours-angles-produit-angle}
+
+    % Angle
+The last step involved measuring the angle at point \(B\) between the vectors \(AB\) and \(BC\), expressed in radians \(\delta\) and in degrees \(\alpha\).%%Translated%%
+
+    \begin{equation*}
+    \begin{array}{lclcl}
+    \displaystyle \delta &=& \displaystyle\frac{AB \cdot BC}{||AB|| * ||BC||}\\\\
+    \end{array}
+    \end{equation*}
+
+    \begin{align*}
+    &\text{where:} \\
+    &acos \text{ represents the $arccosine$ function.}\\
+    \end{align*}
+
+    \begin{equation*}
+    \begin{array}{lclclclclcl}
+    \displaystyle \alpha &=& \delta * (\displaystyle\frac{180}{\pi})\\\\
+    \end{array}
+    \end{equation*}

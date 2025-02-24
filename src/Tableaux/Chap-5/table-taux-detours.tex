@@ -1,0 +1,31 @@
+% Descriptive statistics table for detour rates in E-TVS
+%%Translated%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.47\columnwidth}p{0.1\columnwidth}p{0.1\columnwidth}p{0.11\columnwidth}p{0.11\columnwidth}p{0.11\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \textcolor{blue}{\textbf{Routes}} & \textcolor{blue}{\textbf{Rate}} & \textcolor{blue}{\textbf{$\sigma$}} & \textcolor{blue}{\textbf{Min.}} & \textcolor{blue}{\textbf{Max.}} & \textcolor{blue}{\textbf{Count}}\\
+        \hline
+    \multicolumn{6}{l}{\textbf{Overall journey}}\\
+\small{Intermodal trip~($ km_{eff} $/$ km_{alt} $)} & \small{0.97} & \small{0.07} & \small{0.70} & \small{1.21} & \small{129}\\
+        \hdashline
+    \multicolumn{4}{l}{\textbf{Trip segments}}\\
+\small{Access trip~($ km^{R}_{eff} $/$ km^{R}_{alt} $)} & \small{5.75} & \small{7.30} & \small{1.05} & \small{46.73} & \small{89}\\
+\small{Egress trip~($ km^{D}_{eff} $/$ km^{D}_{alt} $)} & \small{7.73} & \small{14.23} & \small{1.09} & \small{115.22} & \small{81}\\
+\small{Public transport trip~($ km^{TC}_{eff} $/$ km^{TC}_{alt} $)} & \small{0.90} & \small{0.12} & \small{0.45} & \small{1.15} & \small{129}\\
+        \hline
+        \end{tabular}}
+    \caption{Detour rates for commuting journeys involving a detour.}
+    \label{table-chap5:taux-detours}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note:} $\sigma$ corresponds to the standard deviation.
+        \\
+        \textcolor{blue}{Reading Guide:} The detour rates for commuting journeys show that the last-mile and diffusion segments have very high detour rates, but these are compensated by an overall trip that is close to the optimal route.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize{
+        Author: \textcolor{blue}{Dylan Moinse (2023)}
+        }\end{flushright}
+        \end{table}

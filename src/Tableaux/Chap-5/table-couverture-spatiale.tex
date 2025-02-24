@@ -1,0 +1,37 @@
+% Regional population coverage table
+%%Translated%%
+    \begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.33\columnwidth}p{0.12\columnwidth}p{0.12\columnwidth}p{0.15\columnwidth}p{0.13\columnwidth}p{0.15\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Geographical Area}}}} & \small{\textbf{\textcolor{blue}{Distances (km)}}} & \small{\textbf{\textcolor{blue}{Distances (min)}}} & \small{\textbf{\textcolor{blue}{Region Area (\%)}}} & \small{\textbf{\textcolor{blue}{Population (\%)}}} & \small{\textbf{\textcolor{blue}{Density (inhab/km\textsuperscript{2})}}}\\
+        \hline
+\small{Pedestrian isochrones} & \small{\textless1} & \small{\textless12} & \small{0.94} & \small{19.52} & \small{3,880.25}\\
+\small{Pedestrian areas} & \small{\textless1} & \small{\textless12} & \small{3.06} & \small{25.27} & \small{1,552.20}\\
+        \hdashline
+\small{Cyclable isochrones} & \small{{[}1~;~4{[}} & \small{\textless12} & \small{6.61} & \small{36.18} & \small{1,028.07}\\
+\small{Cyclable areas} & \small{{[}1~;~4{[}} & \small{\textless12} & \small{18.48} & \small{40.13} & \small{407.68}\\
+        \hdashline
+\small{Pedestrian and cyclable isochrones} & \multirow{1.5}{*}{\small{\textless4}} & \multirow{1.5}{*}{\small{\textless12}} & \multirow{1.5}{*}{\small{7.55}} & \multirow{1.5}{*}{\small{55.70}} & \multirow{1.5}{*}{\small{1,384.73}}\\
+\small{Pedestrian and cyclable areas} & \small{\textless4} & \small{\textless12} & \small{21.54} & \small{65.40} & \small{570.13}\\
+        \hdashline
+\small{Non-accessible isochrones} & \small{\Geq 4} & \small{\Geq 12} & \small{92.45} & \small{44.30} & \small{89.96}\\
+\small{Non-accessible areas} & \small{\Geq 4} & \small{\Geq 12} & \small{78.46} & \small{34.60} & \small{82.77}\\
+        \hline
+        \end{tabular}}
+    \caption{Regional population coverage by the rail network supported by light individual mobility.}
+    \label{table-chap5:couverture-spatiale}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note:} The average population density in the Hauts-de-France region was 189 inhabitants/km\textsuperscript{2} in 2021.
+        \\
+        \textcolor{blue}{Reading Guide:} Unlike the influence areas of train stations accessible by foot, the train station districts expanded by light individual mobility cover a large portion of the Hauts-de-France population. However, one-third of the regional population theoretically has no access to the stations, despite the use of bicycles or micromobility. Moreover, more than three-quarters of the administrative territory cannot be covered, raising questions about access to destinations such as jobs or certain amenities.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize
+        Data sources: Gridded data from \textcolor{blue}{\textcite{insee_grille_2021}}\index{Insee@\textsl{Insee}|pagebf}
+        \\
+        Author: \textcolor{blue}{Dylan Moinse (2023)}
+        \end{flushright}
+        \end{table}

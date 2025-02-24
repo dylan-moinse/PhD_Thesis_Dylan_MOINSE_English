@@ -1,0 +1,69 @@
+% "([^"]*)"
+% “([^"]*)”
+% “([^"]*)”
+% \Commas{$1}
+
+% — (no  – )
+
+% \\acrshort\{(?!PeS|PBS|DBS|e-Bike|DESS|RHS|HST|PMD|TOD|M-TOD|B-TOD|TER)[^\}]*\}
+
+% Instructions pour la traduction de ma thèse LaTeX en anglais
+
+% Je te fournis des morceaux de texte ci-dessous au fur et à mesure, renvoie-le moi traduit. A chaque fois que je te renvoie un bout de texte, ne traduis pas celui que tu avais traduis auparavant. Ma thèse est rédigée en LaTeX, et il est impératif que la traduction respecte certaines règles strictes. Ne modifie pas en aucun cas ce qu'il y a à l'intérieur de \acrfull{}, \acrshort{} et \gls{}, ni les noms et les clés dans tout ce qui est à l'intérieur de \textcolor{blue}{} et de \index{}. Ne modifie en aucun cas les commandes LaTeX. Ne change pas les symboles, comme ~\%. Ne traduis pas les labels, clés de références ou balises. Ne touche pas aux formules mathématiques, tableaux, figures et leur structure. Seul le texte à l'extérieur de ces éléments doit être traduit.. Une fois qu'un terme technique est traduit, il doit toujours être traduit de la même manière dans tous les chapitres.. Traduis de manière fluide et naturelle en anglais scientifique, sans calque grammatical du français.. Adapte les expressions idiomatiques et les tournures françaises qui ne fonctionnent pas en anglais..Si une phrase est trop lourde ou ambiguë en français, reformule-la en anglais pour améliorer la clarté, tout en restant fidèle au sens original.. Vérifie que les figures et tableaux restent bien référencés sans altération du code..Assure-toi que les termes traduits restent cohérents avec le champ d’étude (urbanisme et mobilité).. Traduis les titres de parties, chapitres, sections, etc, ainsi que les caption, les toc et les header. Quand il y a %%Rédigé%%, change par %%Translated%%
+
+% Merci de suivre ces instructions rigoureusement afin de garantir une traduction homogène et compatible avec la compilation en LaTeX.
+
+
+% _____________________________________________________________
+% SYMBOLES :
+% Guillemets : \Guillemets{}
+% É
+% À
+% © : \textcopyright
+% TM : \Marque{}
+% ~–~
+% Exposant : \textsuperscript{ICI}
+% ... : \dots
+% italique : \textsl{}
+% deux points anglais : \foreignlanguage{english}{:}
+
+% _____________________________________________________________
+% ECRITURE INCLUSIVE :
+% ·
+% elleux
+% usager·ère·s
+% utilisateur·rice·s
+% voyageur·se·s
+% navetteur·se·s
+% intermodaux·les
+
+% _____________________________________________________________
+% Acronymes
+% \acrshort{ICI}
+% \acrfull{ICI}
+
+% Glossaire
+% \gls{ICI}
+%\glspl{ICI}
+
+% _____________________________________________________________
+% Citations
+% \textcolor{blue}{\autocite[]{}}\index{|pagebf}
+% \textcolor{blue}{\textcite[]{}}\index{|pagebf}
+
+% Index
+% \index{HERE}|pagebf} for Authors
+% \index{HERE@\textsl{HERE}|pagebf} for Organizations
+
+% _____________________________________________________________
+% Renvois figures
+% \hyperref[LABEL]{illustration \ref{LEBEL}} (page \pageref{LEVEL}
+% \hyperref[LABEL]{tableau \ref{LEBEL}} (page \pageref{LEVEL}
+% \hyperref[LABEL]{carte \ref{LEBEL}} (page \pageref{LEVEL}
+
+% _____________________________________________________________
+% Liste :
+
+    %\begin{customitemize}
+%\item
+    %\end{customitemize}

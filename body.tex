@@ -1,0 +1,221 @@
+% Préambule
+\pagestyle{fancy}
+
+%% ______________________________ %%
+% READING GUIDE
+\include{src/Corps/Guide-lecture}
+
+%% ______________________________ %%
+% ACKNOWLEDGEMENTS
+\include{src/Corps/Remerciements}
+
+%% ______________________________ %%
+% TOC
+    \cleardoublepage
+    \setcounter{tocdepth}{1}
+\tableofcontents{}
+    \markboth{Table of Contents}{}
+    \markright{Preface}{}
+    %\addcontentsline{toc}{part}{Table des matières}
+    \noindent\makebox[\textwidth]{\hrulefill}
+
+%% ______________________________ %%
+% LIST FIGURES
+\listof{figure}{List of Figures}
+    \markboth{List of Figures}{}
+    \markright{Preface}{}
+    \addcontentsline{toc}{part}{List of Figures}
+    \noindent\makebox[\textwidth]{\hrulefill}
+
+%% ______________________________ %%
+% LIST MAPS
+\listof{carte}{List of Maps}
+    \markboth{List of Maps}{}
+    \markright{Preface}{}
+    \addcontentsline{toc}{part}{List of Maps}
+    \noindent\makebox[\textwidth]{\hrulefill}
+
+%% ______________________________ %%
+% LIST TABLES
+\listof{table}{List of Tables}
+    \markboth{List of Tables}{}
+    \markright{Preface}{}
+    \addcontentsline{toc}{part}{List of Tables}
+    \noindent\makebox[\textwidth]{\hrulefill}
+
+%% ______________________________ %%
+% QUOTE DOCUMENT
+\include{src/Corps/Citer-document}
+
+%% ______________________________ %%
+% FOREWORD
+\include{src/Corps/Avant-propos}
+
+%% ______________________________ %%
+% CAPTATIO BENEVOLENTIAE
+\include{src/Corps/Captatio-benevolentiae}
+
+%% ______________________________ %%
+% INTRODUCTION
+\include{src/Corps/0-Introduction-generale}
+
+%% ______________________________ %%
+% PART 1
+
+% Introduction PART 1
+\include{src/Corps/Part-1-Introduction}
+
+%% ______________________________ %%
+% CHAPTER 1
+\include{src/Corps/Chap-1-Cadre-theorique}
+
+%% ______________________________ %%
+% CHAPTER 2
+\include{src/Corps/Chap-2-Revue-systematique}
+
+%% ______________________________ %%
+% CHAPTER 3
+\include{src/Corps/Chap-3-Methodologie}
+
+% Conclusion PART 1
+\include{src/Corps/Part-1-Conclusion}
+
+%% ______________________________ %%
+% PART 2
+
+% Introduction PART 2
+\include{src/Corps/Part-2-Introduction}
+
+%% ______________________________ %%
+% CHAPTER 4
+\include{src/Corps/Chap-4-Profil-voyageurs}
+
+%% ______________________________ %%
+% CHAPTER 5
+\include{src/Corps/Chap-5-Distances-detours}
+
+% Conclusion PART 2
+\include{src/Corps/Part-2-Conclusion}
+
+%% ______________________________ %%
+% PART 3
+
+% Introduction PART 3
+\include{src/Corps/Part-3-Introduction}
+
+%% ______________________________ %%
+% CHAPTER 6
+\include{src/Corps/Chap-6-Modelisation-NPART}
+
+% Conclusion PART 3
+\include{src/Corps/Part-3-Conclusion}
+
+%% ______________________________ %%
+% CONCLUSION
+\include{src/Corps/0-Conclusion-generale}
+
+%% ______________________________ %%
+% INDEX
+\twocolumn
+\printindex
+    \addcontentsline{toc}{part}{Author Index}
+    \markboth{Author Index}{}
+    \markright{Author Index}{}       
+\onecolumn
+
+%% ______________________________ %%
+% ACRONYMS
+    \cleardoublepage
+    \phantomsection
+    \hypertarget{acronymes}{}
+    \addcontentsline{toc}{part}{List of Abbreviations and Acronyms}
+\renewcommand{\glsnamefont}[1]{\textbf{#1}} % Met les acronymes en gras
+\printglossary[type=\acronymtype, title=Abbreviations and Acronyms, style=long]
+    %\markboth{Sigles et acronymes}{}
+    %\markright{Sigles et acronymes}{}
+    \label{sec:acronymes}
+
+%% ______________________________ %%
+% GLOSSARY
+    \cleardoublepage
+    \phantomsection
+    \hypertarget{glossaire}{}
+    \addcontentsline{toc}{part}{Glossary}
+\printglossary[title=Glossary, style=long]
+    %\markboth{Glossaire}{}
+    %\markright{Glossaire}{}
+    \label{sec:glossaire}
+
+    % ___________________________________________
+    % Subbibliography of Glossary
+    \newpage
+    \begingroup
+    \renewcommand{\bibfont}{\scriptsize}
+\printbibliography[segment=\therefsegment, heading=subbibintoc, title={Bibliography of the Glossary}, label=glossaire:bibliographie]
+    \endgroup
+
+%% ______________________________ %%
+% APPENDICES
+\afterpage{%
+\afterpage{%
+
+    % Arrière-plan annexes
+    \AddToShipoutPictureBG*{%
+\includegraphics[width=\paperwidth,height=\paperheight]{src/Figures/Arriere_plan/Arriere_plan_Annexes.jpg}
+    }
+
+% Rectangle
+\AddToShipoutPictureBG*{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[fill=white, opacity=0.75, text width=\paperwidth, minimum height=5cm, anchor=north] 
+    at ([yshift=-9cm]current page.north) {};
+  \end{tikzpicture}
+}
+
+% Source
+\AddToShipoutPictureFG*{
+  \AtPageLowerRight{
+    \raisebox{1cm}{
+      \hspace{16cm}
+      \begin{tikzpicture}
+        \node[fill=white, rounded corners=5pt, inner sep=5pt, align=center] {
+          \tiny{Photography: \textcolor{blue}{Dylan Moinse (2021)}}
+        };
+      \end{tikzpicture}
+    }
+  }
+}
+}}
+
+    \cleardoublepage
+    \part*{Appendices}
+    \markboth{Appendices}{}
+    %\addcontentsline{toc}{part}{Annexes}
+    \label{annexes:titre}
+    %\renewcommand{\thechapter}{\Alph{chapter}}
+    \renewcommand{\thesection}{\thechapter.\arabic{section}}
+
+    \appendix
+    %\needspace{1\baselineskip} % Réserve de l'espace
+    %\addcontentsline{toc}{part}{Annexes}
+
+    % ___________________________________________
+    % Mini-sommaire
+    \cleardoublepage
+    \setcounter{tocdepth}{1}
+    % Redéfinir le titre de la table des matières locale
+    \renewcommand{\localcontentsname}{Table of Contents of Appendices}
+\localtableofcontents
+
+\include{src/Corps/Annexes/annexes-rsl}
+\include{src/Corps/Annexes/annexes-observation}
+\include{src/Corps/Annexes/annexes-questionnaire-usagers}
+\include{src/Corps/Annexes/annexes-parcours-commentes}
+\include{src/Corps/Annexes/annexes-questionnaire-fub}
+\include{src/Corps/Annexes/annexes-ols}
+\include{src/Corps/Annexes/annexes-detours}
+\include{src/Corps/Annexes/annexes-npart}
+
+%% ______________________________ %%
+% RESUME
+\include{src/Corps/Resume}

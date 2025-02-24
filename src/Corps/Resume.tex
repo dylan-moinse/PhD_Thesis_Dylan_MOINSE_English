@@ -1,0 +1,63 @@
+%------------------------------%
+%% ✎ Dylan (V1) %%%%%%%%% ✅ %%
+%% ✎ Alain (V2) %%%%%%%%% ✅ %%
+%% ✎ Dylan (V3) %%%%%%%%% ✅ %%
+%------------------------------%
+
+%% ______________________________ %%
+% 4E DE COUVERTURE (DERNIÈRE PAGE)
+\AtEndDocument{
+  \cleardoublepage
+  \phantomsection
+  \ifodd\value{page}
+    \null
+    \clearpage % Page paire
+  \fi
+
+\thispagestyle{empty}
+  
+    % Arrière-plan résumé
+    \AddToShipoutPictureBG*{%
+\includegraphics[width=\paperwidth,height=\paperheight]{src/Figures/Arriere_plan/Arriere_plan_Resume.jpg}
+    }
+
+% Rectangle
+\AddToShipoutPictureBG*{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[fill=white, opacity=0.75, text width=0.8\paperwidth, minimum height=11.7cm, anchor=north] 
+    at ([yshift=-1.3cm]current page.north) {};
+  \end{tikzpicture}
+}
+
+% Source
+% \AddToShipoutPictureFG*{
+%   \AtPageLowerRight{
+%     \raisebox{1cm}{
+%       \hspace{16cm}
+%       \begin{tikzpicture}
+%         \node[fill=white, rounded corners=5pt, inner sep=5pt, align=center] {
+%           \tiny{Photographie~: \textcolor{blue}{Dylan Moinse (2024)}}
+%         };
+%       \end{tikzpicture}
+%     }
+%   }
+% }
+
+\section*{Thesis Abstract
+    \label{body:resume-these-français}
+    }
+    \needspace{1\baselineskip} % Réserve de l'espace
+    \addcontentsline{toc}{part}{Thesis Abstract}
+    \markboth{Thesis Abstract}{}
+    \markright{Thesis Abstract}{}
+
+\footnotesize{The resurgence of interest in cycling is part of a broader transformation in mobility practices, increasingly integrated into intermodal travel chains. Within this context, this research examines the role of micromobility in Transit-Oriented Development strategies, exploring its potential to address first- and last-mile connectivity challenges in public transport and thereby reinforce the underlying urban model. The primary objective of this doctoral research is to identify the dynamics of these mobility strategies, analyze their determining factors, and assess their impacts on station-area accessibility across different spatial scales. To this end, the study extends the traditional urban model framework by incorporating micromobility, introducing the concept of Micromobility-friendly Transit-Oriented Development. This approach aims to enrich existing theoretical and operational paradigms by incorporating recent developments in the mobility landscape. Methodologically, the research adopts a mixed-methods approach applied to the Hauts-de-France region. It combines a systematic literature review; fieldwork conducted among intermodal travelers at railway stations, including quantitative observations, a questionnaire survey, and ride-along interviews; and a geostatistical modeling approach revisiting the Node-Place model, reinterpreted through the lens of (new) geographical proximities. The main findings underscore the emerging nature of intermodal practices at railway stations, largely driven by the rise of electric scooters. These modal combinations, still widely underestimated, triple accessibility coverage to both populations and destinations. Moreover, this investigation highlights significant gender disparities in intermodal mobility, which are exacerbated when urban environments are hostile to active travel. By establishing a classification of railway stations in the region, this research demonstrates that integrating micromobility can significantly enhance station usage without requiring major infrastructure overhauls or heavy investments. Ultimately, the development of a "bicycle system" as a catalyst for intermodality strengthens the integration between the public transport network and the broader urban fabric.
+}
+
+% --- %
+    \needspace{1\baselineskip} % Réserve de l'espace
+\subsection*{Keywords}
+
+\noindent
+\textsl{Accessibility; Cycling; Intermodality; Micromobility; Network; Proximities; Station Areas; Transit-Oriented Development; Urban Planning}
+}

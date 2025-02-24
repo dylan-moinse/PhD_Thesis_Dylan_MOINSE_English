@@ -1,0 +1,140 @@
+% ___________________________________________
+    % OLS
+    %\newpage
+    \setcounter{section}{0}
+\chapterheader{Appendices on the Ordinary Least Squares Regression Model}
+\chapter{Appendices on the Preparation and Validation of the Ordinary Least Squares Regression Model}
+    \label{annexes:methodologie-ols-cyclabilite-genre}
+
+    % Reference
+\hyperref[annexes:methodologie-ols-cyclabilite-genre]{Appendix~\ref{annexes:methodologie-ols-cyclabilite-genre}} refers to the \hyperref[section-chap4:cyclabilite-genre]{section dedicated to the links between gendered use of light individual mobility and urban planning action} (page \pageref{section-chap4:cyclabilite-genre}), within \hyperref[chap4:titre]{Chapter~4} (page \pageref{chap4:titre}), and aims to detail the steps for the calculation and validation of \acrfull{OLS}.%%Translated%%
+
+    % ___________________________________________
+    % Mini-table of contents
+    \setcounter{tocdepth}{2}
+    % Redefine the title of the local table of contents
+    \renewcommand{\localcontentsname}{Structure of Appendix~\ref{annexes:methodologie-ols-cyclabilite-genre}}
+\localtableofcontents
+
+    \newpage
+    % Questionnaire structure
+    \newpage
+    \needspace{1\baselineskip} % Reserve space
+    \sectionheader{Modeling Steps}
+\section{Modeling Steps}
+    \label{annexes:methodologie-ols-etapes}
+
+    % Shapiro-Wilk
+\subsection{Z-score Standardization}
+    \label{annexes:methodologie-ols-z-score}
+
+    \begin{equation}
+    \label{annexes:equation:z-score}
+    \begin{aligned}
+Z_i = \frac{X_i - \bar{X}}{\sigma}
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{where:} \\
+    &Z_i \text{ represents the standardized value of the } i\text{-th data point;} \\
+    &X_i \text{ is the original value of the } i\text{-th data point;} \\
+    &\bar{X} \text{ is the mean of the entire dataset;} \\
+    &\sigma \text{ is the standard deviation of the dataset.}
+\end{align*}
+
+    % Shapiro-Wilk
+\subsection{Shapiro-Wilk Test}
+    \label{annexes:methodologie-ols-shapiro-wilk}
+
+    \begin{equation}
+    \label{annexes:equation:shapiro-wilk}
+    \begin{aligned}
+W = \frac{\left( \sum_{i=1}^{n} a_i X_{(i)} \right)^2}{\sum_{i=1}^{n} (X_i - \bar{X})^2}
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{where:} \\
+    &X_{(i)} \text{ represents the ordered sample values;} \\
+    &\bar{X} \text{ is the sample mean;} \\
+    &a_i \text{ are constants derived from the normal distribution;} \\
+    &n \text{ is the sample size.}
+\end{align*}
+
+    % Breusch-Pagan
+\subsection{Breusch-Pagan Test}
+    \label{annexes:methodologie-ols-breusch-pagan}
+
+    \begin{equation}
+    \label{annexes:equation:breusch-pagan}
+    \begin{aligned}
+g_i = \frac{\hat{\epsilon}_i^2}{\hat{\sigma}^2}, \quad \hat{\sigma}^2 = \frac{\sum \hat{\epsilon}_i^2}{n}\\\\
+g_i = \gamma_1 + \gamma_2 z_{2i} + \cdots + \gamma_p z_{pi} + \eta_i\\\\
+LM = \frac{1}{2} (\text{TSS} - \text{RSS})
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{where:} \\
+    &y_i \text{ is the actual value of the dependent variable;} \\
+    &X_i \text{ represents the vector of independent variables;} \\
+    &\beta \text{ is the vector of regression coefficients;} \\
+    &\epsilon_i \text{ is the error term;} \\
+    &\hat{\epsilon}_i \text{ is the estimated residual;} \\
+    &\hat{\sigma}^2 \text{ is the estimated variance of the errors;} \\
+    &g_i \text{ is the normalized squared residual;} \\
+    &z_{pi} \text{ are the variables used in the auxiliary regression;} \\
+    &\gamma_p \text{ are the coefficients in the auxiliary regression;} \\
+    &\eta_i \text{ is the error term in the auxiliary regression;} \\
+    &R^2 \text{ is the R-squared of } \hat{\epsilon}_i^2 \text{ with respect to the independent variables;} \\
+    &TSS \text{ is the total sum of squares of } g_i \text{ with respect to their mean;} \\
+    &RSS \text{ is the sum of residual squares of the auxiliary regression;} \\
+    &n \text{ is the sample size.}
+\end{align*}
+
+    % Durbin-Watson
+\subsection{Durbin-Watson Test}
+    \label{annexes:methodologie-ols-durbin-watson}
+
+    \begin{equation}
+    \label{annexes:equation-durbin-watson}
+    \begin{aligned}
+DW = \frac{\sum_{t=2}^{n} (e_t - e_{t-1})^2}{\sum_{t=1}^{n} e_t^2}
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{where:} \\
+    &e_t \text{ is the residual for the time period } t\text{;} \\
+    &e_{t-1} \text{ is the residual for the time period } t-1\text{;} \\
+    &n \text{ is the sample size.}
+\end{align*}
+
+    % VIF
+\subsection{Variance Inflation Factor}
+    \label{annexes:methodologie-ols-vif}
+
+    \begin{equation}
+    \label{annexes:equation-vif}
+    \begin{aligned}
+VIF(X_i) = \frac{1}{1 - R_i^2}
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{where:} \\
+    &R_i^2 \text{ is the R-squared obtained by regressing } X_i \text{ on the other predictors.}
+\end{align*}
+
+    % MSE
+\subsection{Mean Squared Error}
+    \label{annexes:methodologie-ols-mse}
+
+    \begin{equation}
+    \label{annexes:equation:mse}
+    \begin{aligned}
+MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+    \end{aligned}
+    \end{equation}
+\begin{align*}
+    &\text{where:} \\
+    &y_i \text{ is the actual value of the dependent variable for } i\text{;} \\
+    &\hat{y}_i \text{ is the predicted value by the model for observation } i\text{;}\\
+    &n \text{ is the number of observations.}
+\end{align*}

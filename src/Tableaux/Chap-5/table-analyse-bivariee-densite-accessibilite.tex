@@ -1,0 +1,29 @@
+% Bivariate analysis table
+%%Translated%%
+        \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.5}
+        \resizebox{\columnwidth}{!}{
+        \begin{tabular}{p{0.25\columnwidth}p{0.11\columnwidth}p{0.18\columnwidth}p{0.18\columnwidth}p{0.18\columnwidth}p{0.1\columnwidth}}
+        %\hline
+    \rule{0pt}{15pt} \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Levels}}}} & \multirow{1.5}{*}{\small{\textbf{\textcolor{blue}{Cells}}}} & \small{\textbf{\textcolor{blue}{\(Q1\)* (inhabitants/km\textsuperscript{2})}}} & \small{\textbf{\textcolor{blue}{\(Q2\)* (inhabitants/km\textsuperscript{2})}}} & \small{\textbf{\textcolor{blue}{\(Q3\)* (inhabitants/km\textsuperscript{2})}}} & \multirow{1.5}{*}{\textbf{\textcolor{blue}{$\sigma$}}}\\
+        \hline
+\small{Pedestrian cells} & \small{12,550} & \small{575} & \small{1,925} & \small{4,138} & \small{3,373.87}\\
+\small{Cyclable cells} & \small{39,519} & \small{150} & \small{625} & \small{1,913} & \small{2,163.59}\\
+\small{Automobile cells} & \small{90,424} & \small{100} & \small{275} & \small{700} & \small{842.99}\\
+        \hline
+        \end{tabular}}
+    \caption{Distribution of population density based on accessibility levels around train stations in the Hauts-de-France region.}
+    \label{table-chap5:analyse-bivariee-densite-accessibilite}
+        \vspace{5pt}
+        \begin{flushleft}\scriptsize{
+        \textcolor{blue}{Note:} \(Q1\) corresponds to the first quartile (25\%); \(Q2\) to the median (50\%); \(Q3\) to the third quartile (75\%) of the population density distribution and $\sigma$ corresponds to the standard deviation.
+        \\
+        \textcolor{blue}{Reading Guide:} The population density distribution around train stations in Hauts-de-France is cross-referenced with three levels of accessibility: pedestrian, cyclable, and motorized. Density decreases with accessibility, with pedestrian-accessible cells concentrating the densest areas, followed by cells accessible by light individual mobility and by car.
+        }\end{flushleft}
+        \begin{flushright}\scriptsize
+        Data sources: Gridded data from \textcolor{blue}{\textcite{insee_grille_2021}}\index{Insee@\textsl{Insee}|pagebf}
+        \\
+        Author: \textcolor{blue}{Dylan Moinse (2023)}
+        \end{flushright}
+        \end{table}
